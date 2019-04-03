@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css" />
+
+    <title>HacktivGit</title>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a onclick="getHome()" class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">ACTIONS</a>
+            <div class="dropdown-menu">
+                <a onclick="getStarredRepos()" class="nav-link active" href="#">Get Starred Repos</a>
+                <a onclick="getSearchForm()" class="nav-link active" href="#">Search Starred Repos</a>
+                <a onclick="getCreateRepoForm()" class="nav-link active" href="#">Create a Repo</a>
+                <a onclick="getUnstarRepoForm()" class="nav-link active" href="#">Unstar a Repo</a>
+                <a onclick="getSearchUserRepoForm()" class="nav-link active" href="#">Search a User's List of Repo</a>
+            </div>
+        </li>
+    </ul>
+
+    <h4 style="text-align:center;margin-top:3%">HacktivGit</h4>
+
+    <!-- Avatar -->
+    <div id="userAvatar" style="margin-left:3%"></div>
+
+    <center>
+        <!-- Succes Create Alert -->
+        <div id="successCreateRepoAlert"></div>
+
+        <!-- Succes Unstar Alert -->
+        <div id="successUnstarRepoAlert"></div>
+
+        <!-- Starred Repos -->
+        <div id="starredRepo"></div>
+
+        <!-- Get Search Starred Repos Form -->
+        <div id="getSearchForm"></div>
+
+        <!-- Search Starred Repos Result -->
+        <div id="searchStarredRepoResult"></div>
+
+        <!-- Get Create Repo Form -->
+        <div id="getCreateRepoForm"></div>
+
+        <!-- Get Unstar Repo Form -->
+        <div id="getUnstarRepoForm"></div>
+
+        <!-- Get Search User Repo Form -->
+        <div id="getSearchUserRepoForm"></div>
+
+        <!-- Search User List of Repos Result -->
+        <div id="searchUserRepoResult" style="margin-top:3%"></div>
+    </center>
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
