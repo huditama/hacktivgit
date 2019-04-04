@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Google Sign In (CLIENT ID MASIH BLAK-BLAK AN) -->
+    <meta name="google-signin-client_id"
+        content="914163484154-aij1e1hs2traopu5ia3n4k7lf12i05tk.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="./public/vertical_scroll.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css" />
 
     <title>HacktivGit</title>
+
+    <!-- Google Sign In -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
-
     <!-- NavBar -->
     <ul class="nav justify-content-end">
         <li class="nav-item">
@@ -32,38 +40,69 @@
         </li>
     </ul>
 
-    <h4 style="text-align:center;margin-top:3%">HacktivGit</h4>
-
-    <!-- Avatar -->
-    <div id="userAvatar" style="margin-left:3%"></div>
 
     <center>
-        <!-- Succes Create Alert -->
-        <div id="successCreateRepoAlert"></div>
+        <!-- Google Sign In Form -->
+        <div id="googleSignIn" style="width:20%">
 
-        <!-- Succes Unstar Alert -->
-        <div id="successUnstarRepoAlert"></div>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <h6 style="margin-top:3%">OR Sign In with Google!</h6>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </form>
+        </div>
 
-        <!-- Starred Repos -->
-        <div id="starredRepo"></div>
 
-        <!-- Get Search Starred Repos Form -->
-        <div id="getSearchForm"></div>
 
-        <!-- Search Starred Repos Result -->
-        <div id="searchStarredRepoResult"></div>
 
-        <!-- Get Create Repo Form -->
-        <div id="getCreateRepoForm"></div>
+        <div class="container" style="margin-top:6%">
+            <div class="row">
+                <div class="col-sm">
+                    <h4 style="text-align:center;margin-top:3%">HacktivGit</h4>
 
-        <!-- Get Unstar Repo Form -->
-        <div id="getUnstarRepoForm"></div>
+                    <!-- Avatar -->
+                    <div id="userAvatar" style="margin-left:3%"></div>
+                </div>
+                <div class="col-sm">
+                    <!-- Starred Repos -->
+                    <div id="starredRepo" style="margin-top:3%"></div>
 
-        <!-- Get Search User Repo Form -->
-        <div id="getSearchUserRepoForm"></div>
+                    <!-- Get Search Starred Repos Form -->
+                    <div id="getSearchForm" style="margin-top:30%"></div>
 
-        <!-- Search User List of Repos Result -->
-        <div id="searchUserRepoResult" style="margin-top:3%"></div>
+                    <!-- Get Create Repo Form -->
+                    <div id="getCreateRepoForm" style="margin-top:-12%"></div>
+
+                    <!-- Get Unstar Repo Form -->
+                    <div id="getUnstarRepoForm"></div>
+
+                    <!-- Get Search User Repo Form -->
+                    <div id="getSearchUserRepoForm"></div>
+                </div>
+                <div class="col-sm">
+                    <!-- Succes Create Alert -->
+                    <div id="successCreateRepoAlert" style="width:60%;margin-top:30%"></div>
+
+                    <!-- Succes Unstar Alert -->
+                    <div id="successUnstarRepoAlert" style="margin-top:-10%"></div>
+
+                    <!-- Search Starred Repos Result -->
+                    <div id="searchStarredRepoResult" style="margin-top:20%"></div>
+
+                    <!-- Search User List of Repos Result -->
+                    <div id="searchUserRepoResult" style="margin-top:-20%"></div>
+                </div>
+            </div>
+        </div>
     </center>
 
 
@@ -84,7 +123,13 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- JavaScript -->
-    <script src="./js/index.js"></script>
+    <script src="./js/getHome.js"></script>
+    <script src="./js/getStarredRepos.js"></script>
+    <script src="./js/searchStarredRepos.js"></script>
+    <script src="./js/createNewRepo.js"></script>
+    <script src="./js/unstarRepo.js"></script>
+    <script src="./js/getUserRepo.js"></script>
+    <script src="./js/googleSignIn.js"></script>
 </body>
 
 </html>

@@ -19,8 +19,12 @@
   "homepage": "https://github.com/huditama/hacktivgit#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "google-auth-library": "^3.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.21"
   }
 }

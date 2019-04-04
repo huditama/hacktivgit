@@ -1,0 +1,10 @@
+.scrollable {
+    height: 250px;
+    overflow: scroll
+}
+
+th {
+    position: sticky;
+    top: 0;
+    table-layout: fixed;
+}
